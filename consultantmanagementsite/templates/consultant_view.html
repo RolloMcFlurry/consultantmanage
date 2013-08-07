@@ -1,0 +1,28 @@
+<h1>This is the consultant view</h1>
+
+
+
+<h3>Consultant Details</h3>
+
+    <ul>
+    {% for consultant in consultant_record %}
+        <li><b>Name: </b> {{ consultant.consname }}</li>
+        <li><b>email: </b>{{ consultant.consemail }}</li>
+        <li><b>Date Added: </b>{{ consultant.add_date }}</li>
+    {% endfor %}
+
+    </ul>
+
+<h3>Skills</h3>
+    <ul>
+    {% for consskill in consultant_skills %}
+        <li>{{ consskill.skill }}</li>
+    {% endfor %}
+    </ul>
+
+<h3>Last 5 Contacts</h3>
+    <ul>
+    {% for contact in consultant_contacts %}
+        <li>{{ contact.contacttype }}</li>
+    {% endfor %}
+    </ul>

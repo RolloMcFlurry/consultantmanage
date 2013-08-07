@@ -1,0 +1,12 @@
+<h1>This is the consultant list</h1>
+
+{% if latest_consultant_list %}
+    <ul>
+    {% for consultant in latest_consultant_list %}
+        <li><a href="/consultant/{{ consultant.id }}/">{{ consultant.consname }}</a> {{ consultant.add_date }}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No consultants stored.</p>
+{% endif %}
