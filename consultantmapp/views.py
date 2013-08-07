@@ -33,5 +33,3 @@ def consultant_view(request, consultant_id):
 
     return render(request, 'consultant_view.html',context)
 
-
-    #test comment for git
